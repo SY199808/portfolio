@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans);
 
-/*------色設定------*/
+/*-----
+全般設定
+-----*/
 
 :root {
   --text-color-white: white;
@@ -11,9 +13,23 @@
   --bg-black-color: #000000;
   --progressbar-bg: #ececec;
   --progressbar-color: #34495e;
+  --space1x: 8px;
+  --space2x: calc(var(--space1x) * 2);
+  --space3x: calc(var(--space1x) * 3);
+  --space4x: calc(var(--space1x) * 4);
+  --space5x: calc(var(--space1x) * 5);
+  --space6x: calc(var(--space1x) * 6);
+  --space7x: calc(var(--space1x) * 7);
+  --space8x: calc(var(--space1x) * 8);
+  --space10x: calc(var(--space1x) * 10);
+  --space11x: calc(var(--space1x) * 11);
+  --space12x: calc(var(--space1x) * 12);
+  --space13x: calc(var(--space1x) * 13);
+  --space15x: calc(var(--space1x) * 15);
+  --space17x: calc(var(--space1x) * 17);
+  --space20x: calc(var(--space1x) * 20);
+  --space21x: calc(var(--space1x) * 21);
 }
-
-/*-----全般-----*/
 
 /** {
   outline: 2px red solid;
@@ -57,6 +73,7 @@ section {
   background-image: url("../images/bgimage5.jpg");
   background-size: cover;
   background-position: center;
+  margin-bottom: var(--space5x);
 }
 
 .hero .content {
@@ -79,10 +96,13 @@ section {
   text-shadow: 0px 2px 3px #2d2d2d;
 }
 
-/*------アバウトページ------*/
+/*------
+アバウトページ
+------*/
 
 .about-myself {
   padding: 50px 20px;
+  margin-bottom: var(--space5x);
 }
 .about-myself .content {
   text-align: center;
@@ -101,10 +121,12 @@ section {
   font-weight: bold;
 }
 
-/*-----経歴ページ-----*/
+/*-----
+経歴ページ
+-----*/
 
 .experience {
-  background: var(--bg-black-color);
+  background-color: var(--secondary-bg-color);
   padding: 50px 0;
   overflow-x: hidden;
 }
@@ -119,6 +141,7 @@ section {
   padding: 50px 0;
   list-style-type: none;
 }
+
 .experience .content ul li {
   background: var(--bg-color);
   position: relative;
@@ -145,7 +168,7 @@ section {
   opacity: 0;
   margin-left: 10vw;
 }
-.experience .content ul li .experience-content {
+.experience-content {
   background: var(--bg-color);
   position: relative;
   top: 7px;
@@ -157,22 +180,22 @@ section {
   -moz-border-radius: 0 5px 5px;
   border-radius: 0 5px 5px;
 }
-.experience .content ul li .experience-content h2 {
+.experience-content h2 {
   font-size: 1.5em;
   color: var(--title-color);
   padding-bottom: 10px;
 }
-.experience .content ul li .experience-content .experience-time {
+.experience-time {
   color: #777;
   font-size: 1.1em;
   padding-bottom: 10px;
 }
-.experience .content ul li .experience-content p {
+.experience-content p {
   color: var(--title-color);
   font-size: 0.95em;
 }
 
-.experience .content ul li .experience-content:before {
+.experience-content:before {
   content: "";
   background: var(--bg-color);
   position: absolute;
@@ -182,107 +205,91 @@ section {
   height: 5px;
 }
 
-/*-----スキルセクション-----*/
+/*-----
+スキルセクション
+-----*/
 
 .skills {
   padding: 70px 20px;
 }
-.skills .content .development-wrapper .development-title {
+.development-title {
   color: var(--text-color-white);
   font-size: 2em;
   text-align: center;
   margin-bottom: 20px;
 }
-.skills .content .development-wrapper .skills-bar-container {
+.skills-bar-container {
   position: relative;
   width: 100%;
   list-style-type: none;
 }
-.skills .content .development-wrapper .skills-bar-container li {
+.skills-bar-container li {
   width: 100%;
   margin-bottom: 20px;
 }
-.skills .content .development-wrapper .skills-bar-container .progressbar-title {
+.progressbar-title {
   color: var(--text-color-white);
   margin-bottom: 5px;
 }
-.skills
-  .content
-  .development-wrapper
-  .skills-bar-container
-  .progressbar-title
-  h3 {
+.progressbar-title h3 {
   display: inline-block;
 }
-.skills
-  .content
-  .development-wrapper
-  .skills-bar-container
-  li
-  .progressbar-title
-  .percent {
+.percent {
   position: absolute;
   right: 20px;
   font-size: 1.1em;
+  color: #fff;
 }
 
-.skills .content .development-wrapper .skills-bar-container li .bar-container {
+.bar-container {
   background: var(--progressbar-bg);
   position: relative;
   width: 100%;
   height: 10px;
 }
-.skills
-  .content
-  .development-wrapper
-  .skills-bar-container
-  li
-  .bar-container
-  .progressbar {
+.progressbar {
   background: var(--progressbar-color);
   position: absolute;
   width: 0%;
   height: 100%;
 }
 
-.skills .tools-knowledge-wrapper {
+.tools-knowledge-wrapper {
   width: 100%;
 }
-.skills .tools-knowledge-wrapper .tools-wrapper,
-.skills .tools-knowledge-wrapper .knowledge-wrapper {
+.tools-wrapper,
+.knowledge-wrapper {
   position: relative;
   padding: 20px 0;
   width: 100%;
   text-align: center;
 }
-.skills .tools-knowledge-wrapper .tools-wrapper .title,
-.skills .tools-knowledge-wrapper .knowledge-wrapper .title {
+.tools-wrapper .title,
+.knowledge-wrapper .title {
   color: var(--text-color-white);
   font-size: 2em;
   margin-bottom: 10px;
 }
-.skills .tools-knowledge-wrapper .tools-wrapper ul,
-.skills .tools-knowledge-wrapper .knowledge-wrapper ul {
+.tools-wrapper ul,
+.knowledge-wrapper ul {
   list-style-type: none;
   margin-left: 40px;
 }
-.skills .tools-knowledge-wrapper .tools-wrapper ul li,
-.skills .tools-knowledge-wrapper .knowledge-wrapper ul li {
+.tools-wrapper ul li,
+.knowledge-wrapper ul li {
   color: var(--text-color-white);
   font-weight: bold;
   font-size: 1.1em;
   text-align: left;
 }
-.skills .tools-knowledge-wrapper .tools-wrapper ul li i,
-.skills .tools-knowledge-wrapper .knowledge-wrapper ul li i {
-  color: #27ae60;
-}
-
-/*-----ポートフォリオ セクション-----*/
+/*-----
+ポートフォリオセクション
+-----*/
 
 .portfolio {
   background: var(--bg-black-color);
   padding: 80px 0;
+  background-color: #fff;
 }
 .portfolio .content {
   text-align: center;
@@ -292,33 +299,41 @@ section {
   font-size: 2em;
   margin-bottom: 50px;
 }
-.portfolio .content .projects {
+.projects {
   width: 100%;
 }
-.portfolio .content .projects .project {
+.project {
   color: #fff;
   position: relative;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  margin-bottom: 10%;
+  margin-bottom: var(--space2x);
   overflow: hidden;
 }
-.portfolio .content .projects .project:last-child {
+.project:last-child {
   margin-bottom: 0;
 }
-.portfolio .content .projects .project .project-image img {
+.project-image img {
   width: 100%;
 }
-.portfolio .content .projects .project .project-title {
-  color: var(--text-color-white);
+.project-title {
+  color: var(--text-color);
   padding: 10px 0;
 }
-.portfolio .content .projects .project .project-description {
+.project-title h2 a {
+  transition: color 0.3s;
+}
+.project-title h2 a:hover {
+  color: #5085ba;
+}
+.project-description {
   color: var(--text-color);
 }
 
-/*-----フッター ここから-----*/
+/*-----
+フッター設定
+-----*/
 
 footer {
   padding: 25px 0;
@@ -333,24 +348,27 @@ footer i {
   color: #e74c3c;
 }
 
-/* --------------------------
-    レスポンシブ ここから
--------------------------- */
+/*-----
+レスポンシブ ここから
+----- */
 
 @media screen and (min-width: 480px) {
-  .skills .content .tools-knowledge-wrapper .tools-wrapper,
-  .skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+  .tools-wrapper,
+  .knowledge-wrapper {
     width: 50%;
     float: left;
     padding: 0;
   }
-  .skills .content .tools-knowledge-wrapper .tools-wrapper ul,
-  .skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
+  .tools-wrapper ul,
+  .knowledge-wrapper ul {
     margin-left: 0;
   }
 
   .skills .content .clear {
     clear: both;
+  }
+  .project {
+    margin-bottom: var(--space5x);
   }
 }
 
@@ -363,23 +381,25 @@ footer i {
     padding-left: 0;
     padding-right: 0;
   }
-  .skills .content .development-wrapper {
+  .development-wrapper {
     width: 600px;
     margin: auto;
     margin-bottom: 50px;
   }
 
-  .skills .content .tools-knowledge-wrapper {
+  .tools-knowledge-wrapper {
     width: 600px;
     margin: auto;
   }
+  .project {
+    margin-bottom: var(--space5x);
+  }
 }
-
 @media screen and (min-width: 960px) {
   .experience .content ul li {
     margin: 0 auto;
   }
-  .experience .content ul li .experience-content {
+  .experience-content {
     width: 40vw;
   }
   .experience .content ul li:nth-child(odd) .experience-content {
@@ -415,33 +435,33 @@ footer i {
     max-width: 1100px;
     margin: auto;
   }
-  .skills .content .development-wrapper,
-  .skills .content .tools-knowledge-wrapper {
+  .development-wrapper,
+  .tools-knowledge-wrapper {
     float: left;
   }
 
-  .skills .content .development-wrapper {
+  .development-wrapper {
     margin-bottom: 0;
     width: 60%;
   }
 
-  .skills .content .tools-knowledge-wrapper {
+  .tools-knowledge-wrapper {
     width: 40%;
     margin-top: 60px;
   }
-  .skills .content .tools-knowledge-wrapper .tools-wrapper,
-  .skills .content .tools-knowledge-wrapper .knowledge-wrapper {
+  .tools-wrapper,
+  .knowledge-wrapper {
     float: none;
     margin: auto;
   }
-  .skills .content .tools-knowledge-wrapper .tools-wrapper {
+  .tools-wrapper {
     margin-bottom: 30px;
   }
 
-  .portfolio .content .projects .project {
+  .project {
     position: relative;
     margin: auto;
-    margin-bottom: 3%;
+    margin-bottom: var(--space5x);
     width: 680px;
     height: 450px;
     overflow: hidden;
@@ -456,7 +476,7 @@ footer i {
     opacity: 1;
   }
 
-  .portfolio .content .projects .project .project-image {
+  .project-image {
     position: absolute;
     left: 0;
     top: 0;
@@ -469,14 +489,15 @@ footer i {
     z-index: 3;
     overflow: hidden;
   }
-  .portfolio .content .projects .project .project-image img {
+  .project-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     min-height: 100%;
     min-width: 100%;
+    object-fit: cover;
   }
-  .portfolio .content .projects .project .project-title,
-  .portfolio .content .projects .project .project-description {
+  .project-title,
+  .project-description {
     position: absolute;
     height: 50%;
     opacity: 0;
@@ -484,7 +505,7 @@ footer i {
     transition: opacity 0.3s linear;
     overflow: hidden;
   }
-  .portfolio .content .projects .project .project-title {
+  .project-title {
     width: 50%;
     top: 0;
     right: 0;
@@ -492,16 +513,17 @@ footer i {
     text-align: center;
     display: table;
   }
-  .portfolio .content .projects .project .project-title h2 {
+  .project-title h2 {
     font-size: 2em;
     display: table-cell;
     vertical-align: middle;
   }
-  .portfolio .content .projects .project .project-description {
+  .project-description {
     width: 100%;
     top: 50%;
     left: 0;
     padding: 25px 10px;
     text-align: left;
+    margin-bottom: var(--space5x);
   }
 }

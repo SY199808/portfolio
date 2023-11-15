@@ -12,7 +12,7 @@ document.querySelector(".open-overlay").addEventListener("click", function () {
     bottom_bar = document.querySelector(".bar-bottom");
 
   /*toggle = クラスのOn,Offの切替(クラスが含まれていれば削除、なければ追加)
-    　contains = 指定したクラスが含まれているか走査*/
+    contains = 指定したクラスが含まれているか走査*/
 
   //overlay_navigationのクラス設定(overlay-active)にトグル設定(スイッチ)
   overlay_navigation.classList.toggle("overlay-active");

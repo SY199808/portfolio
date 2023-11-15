@@ -9,31 +9,61 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap">
   </head>
   <body>
-    <main class="siteHero">
-      <div class="heroContent">
+
+    <!--オープニングイベント ここから-->
+    <div class="c-loader-bg js-loader-bg">
+      <div class="loader-title-wrap">
+        <div class="loader-title">
+          <h1 class="loader-title-item">ご縁の聖地、出雲</h1>
+        </div>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="hero">
+
+    <!--スライドショー-->
+
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slide1"></div>
-            <div class="swiper-slide slide2"></div>
-            <div class="swiper-slide slide3"></div>
-            <div class="swiper-slide slide4"></div>
-            <div class="swiper-slide slide5"></div>
-            <div class="swiper-slide slide6"></div>
+            <div class="swiper-slide">
+              <div id="slide1"></div>
+            </div>
+            <div class="swiper-slide">
+              <div id="slide2"></div>
+            </div>
+            <div class="swiper-slide">
+              <div id="slide3"></div>
+            </div>
+            <div class="swiper-slide">
+              <div id="slide4"></div>
+            </div>
+            <div class="swiper-slide">
+              <div id="slide5"></div>
+            </div>
+            <div class="swiper-slide">
+              <div id="slide6"></div>
+            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
+
         <!--サイトヘッダー ここから-->
         <div class="header">
-          <h1 class="header-title">神々の国　「出雲」</h1>
-          <p class="header-content">八雲立つ神秘</p>
+          <h1 class="header-title">かみがみのクニ 「いづも」</h1>
+          <p class="header-content">やくも たつ 神秘</p>
         </div>
       </div>
       <!--出雲市の概要-->
       <section class="about" id="about">
-        <img src="images/taisya.jpg" class="about-img" />
+        <figure>
+          <img src="images/taisya2.jpg" class="about-img" />
+        </figure>
         <div class="about-content">
           <p>
             1952年、「国宝」に指定された、
@@ -51,8 +81,12 @@
             観て、味わって、感じて。
             <br />
             自分で見つけ出すからこそ感動する。
+            <br />
+            ぜひ、あなたの歩幅で、
+            <br />
+            ご縁の国を歩いてみて下さい。
           </p>
-          <h2 class="font-serif font-bold text-3xl leading-loose ml-40">
+          <h2>
             ご縁も、
             <br />
             美肌も、
@@ -61,8 +95,8 @@
           </h2>
         </div>
       </section>
-      <!--出雲のモデルコース-->
-      <section class="course">
+      <!--出雲のモデルコース--> 
+      <section class="course" id="modelcourse">
         <div class="page-container">
           <h2 class="section-title">
             気分や目的で選べる
@@ -73,10 +107,10 @@
             <div class="course-list-item">
               <a href="">
                 <figure class="course-list-image">
-                  <img src="images/izumopic5.jpg" />
+                  <img src="images/course1.jpg" />
                 </figure>
                 <p class="course-list-title">
-                  名所を押さえてレイラインを満喫。
+                  名所を押さえてご縁を独り占め
                   <br />
                   外せない王道コース
                 </p>
@@ -85,10 +119,10 @@
             <div class="course-list-item">
               <a href="">
                 <figure class="course-list-image">
-                  <img src="images/izumopic5.jpg" />
+                  <img src="images/course2.jpg" />
                 </figure>
                 <p class="course-list-title">
-                  山陰の秋を満喫。
+                  山陰の秋を満喫
                   <br />
                   出雲紅葉＆神社仏閣巡り
                 </p>
@@ -97,24 +131,24 @@
             <div class="course-list-item">
               <a href="">
                 <figure class="course-list-image">
-                  <img src="images/izumopic5.jpg" />
+                  <img src="images/course3.jpg" />
                 </figure>
                 <p class="course-list-title">
-                  名所を押さえてレイラインを満喫。
+                  美しい水平線や夕日を楽しめる
                   <br />
-                  外せない王道コース
+                  オーシャンビュードライブ
                 </p>
               </a>
             </div>
             <div class="course-list-item">
               <a href="">
                 <figure class="course-list-image">
-                  <img src="images/izumopic5.jpg" />
+                  <img src="images/course4.jpg" />
                 </figure>
                 <p class="course-list-title">
-                  名所を押さえてレイラインを満喫。
+                  太古の歴史を肌で感じる
                   <br />
-                  外せない王道コース
+                  出雲神話＆縁結びコース
                 </p>
               </a>
             </div>
@@ -122,7 +156,7 @@
         </div>
       </section>
       <!--出雲の見どころスポット-->
-      <section class="spot">
+      <section class="spot" id="spot">
         <div class="page-container">
           <h2 class="section-title">
             旅に更なる彩りを
@@ -133,7 +167,7 @@
         <div class="spot-lists">
           <div class="spot-lists-row">
             <div class="spot-lists-category">
-              <div class="spot-lists-title">伝統芸能</div>
+              <div class="spot-lists-title">伝統文化</div>
             </div>
             <div class="spot-lists-description">
               観て、感じて、悠久の歴史に思いを馳せる。
@@ -141,34 +175,29 @@
             <div class="spot-lists-list">
               <div class="spot-lists-list-item">
                 <div class="spot-lists-list-image">
-                  <figure>
-                    <img
-                      src="images/kagura.jpg"
-                      alt
-                      width="1020px"
-                      height="720px"
-                    />
-                  </figure>
+                  <img src="images/traditional.jpg" />
                 </div>
                 <div class="spot-lists-list-content">
-                  <p class="spottitle">traditional kagura</p>
+                  <p class="spottitle">traditional culture</p>
                   <h3 class="title">岩見神楽</h3>
                   <p class="description">
-                    テキストテキストテキストテキストテキストテキスト
+                    平安末期から室町時代に農耕神「大元神」を信仰した田楽系の行事が由来とされています。
+                    <br />
+                    江戸時代には出雲佐陀神楽が、歌舞伎や能の所作と融合させた神話劇の神能を演ずるようになり、その佐陀神能が爆発的に石見に波及され演劇化されていきました。
                   </p>
                 </div>
               </div>
               <div class="spot-lists-list-item">
                 <div class="spot-lists-list-image">
-                  <figure>
-                    <img src="images/kagura.jpg" />
-                  </figure>
+                  <img src="images/traditional2.jpg" />
                 </div>
                 <div class="spot-lists-list-content">
-                  <p class="spottitle">traditional kagura</p>
-                  <h3 class="title">岩見神楽</h3>
+                  <p class="spottitle">traditional culture</p>
+                  <h3 class="title">どんどさん</h3>
                   <p class="description">
-                    テキストテキストテキストテキストテキストテキスト
+                    「とんど」は、小正月に無病息災を願って行われる火祭りのことで、全国各地に似たような習慣がありますが、出雲では「とんどさん」として親しまれています。
+                    <br />
+                    地域によってはお餅や書き初めを一緒に燃やすこともあります。
                   </p>
                 </div>
               </div>
@@ -176,52 +205,122 @@
           </div>
           <div class="spot-lists-row">
             <div class="spot-lists-category">
-              <div class="spot-lists-title">伝統芸能</div>
+              <div class="spot-lists-title">景 色</div>
             </div>
             <div class="spot-lists-description">
-              観て、感じて、
-              <br />
-              悠久の歴史に思いを馳せる。
+              静かに流れる時間で心を洗う
             </div>
             <div class="spot-lists-list">
               <div class="spot-lists-list-item">
                 <div class="spot-lists-list-image">
-                  <figure>
-                    <img src="images/kagura.jpg" />
-                  </figure>
+                  <img src="images/inasa.jpg" />
                 </div>
                 <div class="spot-lists-list-content">
-                  <p class="spottitle">traditional kagura</p>
-                  <h3 class="title">岩見神楽</h3>
+                  <p class="spottitle">landscape</p>
+                  <h3 class="title">稲佐の浜</h3>
                   <p class="description">
-                    テキストテキストテキストテキストテキストテキスト
+                    出雲大社の約1kmにある海岸で、国譲り、国引きの神話で知られます。
+                    <br />
+                    浜辺の奥に大国主命と建御雷神が国譲りの交渉をしたという屏風岩があり、海岸の南には、国引きのとき島を結ぶ綱になったという薗の長浜が続いています。
                   </p>
                 </div>
               </div>
               <div class="spot-lists-list-item">
                 <div class="spot-lists-list-image">
-                  <figure>
-                    <img src="images/kagura.jpg" />
-                  </figure>
+                  <img src="images/hinomisaki.jpg" />
                 </div>
                 <div class="spot-lists-list-content">
-                  <p class="spottitle">traditional kagura</p>
-                  <h3 class="title">岩見神楽</h3>
+                  <p class="spottitle">landscape</p>
+                  <h3 class="title">日御碕灯台</h3>
                   <p class="description">
-                    テキストテキストテキストテキストテキストテキスト
+                    明治36年(1903年)に設置され、高さ43.65mがあり石造灯台として日本一の高さを誇ります。
+                    <br />
+                    定期的にライトアップされ、昼の真っ白な姿とはまた違った魅力を見せてくれます。
+                  </p>
+                </div>
+              </div>
+              <div class="spot-lists-list-item">
+                <div class="spot-lists-list-image">
+                  <img src="images/tatikue.jpg" />
+                </div>
+                <div class="spot-lists-list-content">
+                  <p class="spottitle">landscape</p>
+                  <h3 class="title">立久恵峡</h3>
+                  <p class="description">
+                    1964年に県立自然公園に指定され、その荘厳な景観から「山陰の耶馬渓」とも称される警告です。
+                    <br />
+                    秋には紅葉の名所としても知られ、例年11月中旬ごろに木々が色づき、見事な紅葉を見ることができます。
                   </p>
                 </div>
               </div>
             </div>
           </div>
+          <div class="spot-lists-row">
+            <div class="spot-lists-category">
+              <div class="spot-lists-title">温 泉</div>
+            </div>
+            <div class="spot-lists-description">
+              歴史ある温泉で非日常に浸かろう
+            </div>
+            <div class="spot-lists-list">
+              <div class="spot-lists-list-item">
+                <div class="spot-lists-list-image">
+                  <img src="images/yunokawa.jpg" />
+                </div>
+                <div class="spot-lists-list-content">
+                  <p class="spottitle">on-sen</p>
+                  <h3 class="title">湯の川温泉</h3>
+                  <p class="description">
+                    「日本三大美人の湯」のひとつ。泉質はナトリウム、カルシウム、保湿に良いメタケイ酸を含むのでお肌がつるつるになります。
+                    <br />
+                    大国主命と恋に落ちた因幡の国の八上姫は、この温泉で癒されより一層美人になったと伝えられています。
+                  </p>
+                </div>
+              </div>
+              <div class="spot-lists-list-item">
+                <div class="spot-lists-list-image">
+                  <img src="images/tamadukuri.jpg" />
+                </div>
+                <div class="spot-lists-list-content">
+                  <p class="spottitle">on-sen</p>
+                  <h3 class="title">玉造温泉</h3>
+                  <p class="description">
+                    日本最古の湯のひとつとも言われており、化粧水のような泉質が特徴です。
+                    <br />
+                    枕草子に「湯はななくり湯、玉造の湯、有馬の湯」とあることから、三名泉の一つとも呼ばれています。
+                  </p>
+                </div>
+              </div>
+            </div>
         </div>
       </section>
     </main>
-    <!--出雲市の公式インスタ載せる-->
-    <section class="insta-area"></section>
     <!--フッター ここから-->
     <footer class="site-footer">
-      <div class="site-footer-content"></div>
+      <div class="site-footer-content">
+        <div class="footer-hidden">
+          <h1 class="footer-title">かみがみのクニ 「いづも」</h1>
+          <p class="footer-subtitle">やくも たつ 神秘</p>
+        </div>
+        <div class="footer-sitemap">
+          <h2>Site Map</h2>
+          <ul>
+            <li>
+              <a href="#modelcourse">model course</a>
+            </li>
+            <li>
+              <a href="#spot">keyward</a>
+            </li>
+            <li>
+              <a href="about.html">about me</a>
+            </li>
+            <li>
+              <a href="#">Github</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
@@ -229,8 +328,8 @@
         loop: true,
         centeredSlides: true,
         slidesPerView: 3,
-        spaceBetween: 16,
-        speed: 1000,
+        spaceBetween: 15,
+        speed: 2000,
         pagination: {
           el: ".swiper-pagination",
           type: "progressbar",
@@ -240,5 +339,7 @@
         },
       });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script/izumo.js"></script>
   </body>
 </html>

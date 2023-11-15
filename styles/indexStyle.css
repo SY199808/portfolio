@@ -25,7 +25,9 @@ body {
   padding-bottom: 3px;
 }
 
-/*-----Navigation-----*/
+/*-----
+ナビゲーション
+-----*/
 
 .overlay-navigation {
   position: fixed;
@@ -183,7 +185,9 @@ nav li:nth-of-type(4) {
   animation: slide-in-nav-item-reverse 0.3s linear 1 both;
 }
 
-/*-----ハンバーガーメニュー-----*/
+/*-----
+ハンバーガーメニュー
+-----*/
 
 .open-overlay {
   position: absolute;
@@ -227,9 +231,9 @@ nav li:nth-of-type(4) {
   animation: animate-out-middle-bar 0.6s linear 1 both;
 }
 
-/* ====================================
-Animation keyframes
-==================================== */
+/*-----
+アニメーション設定
+----- */
 
 @keyframes slide-in-nav-item {
   from {

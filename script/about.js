@@ -36,7 +36,7 @@ intersectionObserverAPIオブジェクトを使用し作成*/
     threshold: [0.7],
   };
 
-  //コールバック関数
+  //コールバック
   //isIntersecting = 監視対象が交差したらtrue,それ以外false
   function aboutCallback(entries) {
     entries.forEach((entry) => {
@@ -89,6 +89,7 @@ intersectionObserverAPIオブジェクトを使用し作成*/
   /*------------
       スキルページ
     ------------*/
+
   let devIsVisible = false;
   const skillTargets = document.querySelectorAll(".skills-bar-container li");
 
@@ -116,7 +117,6 @@ intersectionObserverAPIオブジェクトを使用し作成*/
             } else {
               width++;
               elem.style.width = width + "%";
-              percent.innerHTNL = width + " %";
             }
           }, 15);
         });
